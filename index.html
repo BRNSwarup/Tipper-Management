@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/sangu-logo.png" />
+    <link rel="apple-touch-icon" href="/sangu-logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ea580c" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Sangu's Tippers - Commercial Tipper & Fleet Management System</title>
+    <meta name="title" content="Sangu's Tippers - Commercial Tipper & Fleet Management System" />
+    <meta name="description" content="Sangu's Tippers Fleet Management System - Manage trucks, drivers, trips, diesel fuel mileage, maintenance, driver ledger cash accounts, customer billing invoices, and truck papers with 100% offline support and push notification alerts." />
+    <meta name="keywords" content="Sangu's Tippers, Truck Management System, Tipper Fleet Management, Driver Ledger, Transport Management App, Diesel Mileage Calculator, Fleet Maintenance, Transport Invoicing, Offline Fleet PWA, Supabase Transport App" />
+    <meta name="author" content="Sangu's Tippers Logistics" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Open Graph / Facebook SEO Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sangustippers.vercel.app/" />
+    <meta property="og:title" content="Sangu's Tippers - Commercial Tipper & Fleet Management System" />
+    <meta property="og:description" content="Streamline tipper fleet logistics, driver cash advances, trip profit & loss, fuel mileage, and document expiry alerts with Sangu's Tippers PWA." />
+    <meta property="og:image" content="/sangu-logo.png" />
+    <meta property="og:site_name" content="Sangu's Tippers System" />
+
+    <!-- Twitter Card SEO Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sangustippers.vercel.app/" />
+    <meta property="twitter:title" content="Sangu's Tippers - Commercial Fleet Management System" />
+    <meta property="twitter:description" content="Commercial tipper fleet management with offline mode, push alerts, and driver ledger settlements." />
+    <meta property="twitter:image" content="/sangu-logo.png" />
+
+    <!-- JSON-LD Structured Data Schema for Google Search Top Ranking -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sangu's Tippers Fleet Management System",
+      "operatingSystem": "All (Web, Android, iOS, Windows, Mac)",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "description": "Full-stack commercial tipper & truck fleet management app for transport owners, trip billing, driver ledger accounts, diesel mileage tracking, and push notifications.",
+      "image": "/sangu-logo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "Sangu's Tippers Transport"
+      }
+    }
+    </script>
+  </head>
+  <body className="bg-slate-950 text-slate-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then((reg) => {
+            console.log('Sangu\'s Tippers PWA Service Worker Registered:', reg.scope);
+          }).catch((err) => {
+            console.error('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

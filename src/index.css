@@ -1,0 +1,273 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #fffcf8;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --border-color: #ffedd5;
+    --primary: #ea580c;
+    --primary-hover: #c2410c;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-rose: #ef4444;
+    --accent-blue: #2563eb;
+  }
+
+  *, *::before, *::after {
+    font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, p, span, div, td, th, label, a, button, input, select, textarea, h1, h2, h3, h4, h5, h6, option, small, b, strong {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000000;
+    font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    padding: 0;
+    background-color: #fffcf8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 13.5px;
+  }
+}
+
+/* ==========================================
+   ULTRA-THICK BOLD FONT OVERRIDES (ALL PAGES)
+   ========================================== */
+
+/* Force ALL font weight utilities to heavy 900 weight */
+.font-thin,
+.font-extralight,
+.font-light,
+.font-normal,
+.font-medium,
+.font-semibold,
+.font-bold,
+.font-extrabold,
+.font-black {
+  font-weight: 900 !important;
+}
+
+/* Force opacity on all text to be 100% solid */
+.opacity-40,
+.opacity-50,
+.opacity-60,
+.opacity-70,
+.opacity-80,
+.opacity-90 {
+  opacity: 1 !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fff7ed;
+}
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 4px;
+}
+
+/* Base Light Container Styles */
+.bg-white {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.bg-slate-50,
+.bg-slate-100 {
+  background-color: #fffbf7 !important;
+  color: #000000 !important;
+}
+
+/* Convert ALL Slate/Grey Text Utilities -> Thick Solid Black (#000000) */
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-slate-900,
+.text-slate-950,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-black,
+.text-muted {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Keep Orange Highlight Text Crisp & Thick */
+.text-orange-500,
+.text-orange-600,
+.text-orange-700 {
+  color: #ea580c !important;
+  font-weight: 900 !important;
+}
+
+/* Text & SVG icons inside Dark Background containers (Buttons, Black Header) -> Pure White (#ffffff) */
+.bg-slate-950 *,
+.bg-slate-900 *,
+.bg-black *,
+[class*="from-orange-500"] *,
+[class*="bg-orange-500"] *,
+button.bg-orange-500 *,
+button.bg-sky-500 *,
+button.bg-blue-600 *,
+.bg-emerald-600 *,
+.bg-rose-600 * {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+}
+
+.bg-slate-950 svg,
+.bg-slate-900 svg,
+.bg-black svg {
+  stroke: #ffffff !important;
+}
+
+/* SVG Icon Strokes Thick & Clear */
+svg {
+  stroke-width: 2.5px !important;
+}
+
+/* Card & Panel Styling */
+.glass-panel,
+.glass-card {
+  background-color: #ffffff !important;
+  border: 1.5px solid #ffedd5 !important;
+  box-shadow: 0 4px 20px -2px rgba(234, 88, 12, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03) !important;
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #000000 !important;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: #ea580c !important;
+  box-shadow: 0 10px 25px -4px rgba(234, 88, 12, 0.15) !important;
+}
+
+/* Table Orange Header Styling */
+table {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+thead th,
+th {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #c2410c !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tbody td {
+  font-weight: 900 !important;
+  color: #000000 !important;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ffedd5 !important;
+  background-color: #ffffff !important;
+}
+
+tbody tr:hover {
+  background-color: #fff7ed !important;
+}
+
+/* Borders */
+.border-slate-200,
+.border-slate-300,
+.border-slate-100,
+.border-gray-200 {
+  border-color: #ffedd5 !important;
+}
+
+/* Inputs & Form Controls */
+input, select, textarea {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #fed7aa !important;
+  border-radius: 0.625rem;
+  transition: all 0.15s ease;
+  font-weight: 900 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ea580c !important;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2) !important;
+  outline: none;
+}
+
+::placeholder {
+  color: #000000 !important;
+  opacity: 0.8 !important;
+  font-weight: 900 !important;
+}
+
+/* Status Badges */
+.badge-emerald {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+  font-weight: 900 !important;
+}
+
+.badge-amber,
+.badge-orange {
+  background-color: #fff7ed !important;
+  color: #c2410c !important;
+  border: 1px solid #ffedd5 !important;
+  font-weight: 900 !important;
+}
+
+.badge-rose {
+  background-color: #fff1f2 !important;
+  color: #be123c !important;
+  border: 1px solid #fecdd3 !important;
+  font-weight: 900 !important;
+}
+
+.badge-blue {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border: 1px solid #bfdbfe !important;
+  font-weight: 900 !important;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}

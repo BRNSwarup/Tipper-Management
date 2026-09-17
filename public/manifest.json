@@ -1,0 +1,17 @@
+{
+  "short_name": "Sangu's Tippers",
+  "name": "Sangu's Tippers - Commercial Fleet Management System",
+  "icons": [
+    {
+      "src": "/sangu-logo.png",
+      "type": "image/png",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#09090b",
+  "display": "standalone",
+  "orientation": "any",
+  "description": "Enterprise Tipper Fleet Management, Trips, Fuel, Maintenance, & Invoicing System"
+}
